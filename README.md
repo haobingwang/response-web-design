@@ -4,11 +4,19 @@
 
 **使用百分比宽度布局，同时使用媒体查询来限制变动的范围**，这两点是响应式设计的核心。
 
-- 宽度使用百分比
-- 字体使用 rem
-- 图片默认宽度 100%
+- 弹性网格布局
+  - 宽度使用百分比。
+  - 字体使用 rem 和 em。
+- 弹性图片
+  - 图片默认宽度 100%。
+  - 为特定图片指定特定的百分比宽度。
+  - 限制最大宽度为图片实际宽度。
+- 媒体查询
+  - 视口从大到小定义。
 
-## 宽度使用百分比
+## 弹性网格布局
+
+### 宽度使用百分比
 
 ```css
 .wrapper {
@@ -28,7 +36,7 @@
 }
 ```
 
-## 字体使用 em 和 rem
+### 字体使用 em 和 rem
 
 通过62.5%的设定，就可以很容易用 `rem` 来定义具体属性的尺寸了（10倍的关系）。
 
@@ -60,5 +68,44 @@ img {
   margin-top: -28px;
   width: 28.9398281%; /* 202/698 */
   max-width: 202px; /* 限制图片的最大宽度 */
+}
+```
+
+## 媒体查询
+
+```css
+@media screen and (min-width: 1080px) {
+  body {
+    font-size: 2.4rem;
+    background-color: rebeccapurple;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1080px) {
+  body {
+    font-size: 2rem;
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 805px) and (max-width: 1000px) {
+  body {
+    font-size: 1.6rem;
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 804px) {
+  body {
+    font-size: 1.2rem;
+    background-color: yellow;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    font-size: 1rem;
+    background-color: burlywood;
+  }
 }
 ```
