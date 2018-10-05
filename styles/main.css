@@ -1,0 +1,38 @@
+html {
+  font-size: 62.5%;
+}
+
+@media screen and (min-width: 1080px) {
+  body {
+    font-size: 2.4rem;
+    background-color: rebeccapurple;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1080px) {
+  body {
+    font-size: 2rem;
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 805px) and (max-width: 1000px) {
+  body {
+    font-size: 1.6rem;
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 804px) {
+  body {
+    font-size: 1.2rem;
+    background-color: yellow;
+  }
+}
+
+@media screen and (max-width: 769px) {
+  body {
+    font-size: 1rem;
+    background-color: burlywood;
+  }
+}
