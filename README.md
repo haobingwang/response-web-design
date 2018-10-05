@@ -13,14 +13,20 @@
 ```css
 .wrapper {
   width: 100%;
-  margin-left: 20%;
+
+  /* 外边距的百分比是相对于包含块的宽度 */
+  margin-top: 20%;
   margin-right: 20%;
-  padding-left: 20%;
+  margin-left: 20%;
+  margin-bottom: 20%;
+
+  /* 内边距的百分比是相对于包含块的宽度 */
+  padding-top: 20%;
   padding-right: 20%;
+  padding-bottom: 20%;
+  padding-left: 20%;
 }
 ```
-
-高度依然使用 px
 
 ## 字体使用 em 和 rem
 
