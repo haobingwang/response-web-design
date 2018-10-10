@@ -1,9 +1,37 @@
-html {
-  font-size: 62.5%;
-}
-
 img {
   max-width: 100%;
+}
+
+/* 基准字号 16px * 62.5% = 10px */
+/* 有的浏览器最小支持 12px，所以不能直接定义为 10px */
+html { font-size:62.5%; }
+
+@media screen and (min-width: 1080px) {
+  html {
+    font-size: 18px;
+    background-color: rebeccapurple;
+  }
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1080px) {
+  html {
+    font-size: 16px;
+    background-color: red;
+  }
+}
+
+@media screen and (min-width: 805px) and (max-width: 1000px) {
+  html {
+    font-size: 14px;
+    background-color: blue;
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 804px) {
+  html {
+    font-size: 12px;
+    background-color: yellow;
+  }
 }
 
 .wrapper {
@@ -11,39 +39,4 @@ img {
   margin-right: auto;
   width: 95%;
   max-width: 1200px; /* 限制页面无限扩张 */
-}
-
-@media screen and (min-width: 1080px) {
-  body {
-    font-size: 2.4rem;
-    background-color: rebeccapurple;
-  }
-}
-
-@media screen and (min-width: 1001px) and (max-width: 1080px) {
-  body {
-    font-size: 2rem;
-    background-color: red;
-  }
-}
-
-@media screen and (min-width: 805px) and (max-width: 1000px) {
-  body {
-    font-size: 1.6rem;
-    background-color: blue;
-  }
-}
-
-@media screen and (min-width: 769px) and (max-width: 804px) {
-  body {
-    font-size: 1.2rem;
-    background-color: yellow;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  body {
-    font-size: 1rem;
-    background-color: burlywood;
-  }
 }

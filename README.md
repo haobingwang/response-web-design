@@ -73,39 +73,38 @@ img {
 
 ## 媒体查询
 
+使用媒体查询设置基准字号：
+
 ```css
+/* 基准字号 16px * 62.5% = 10px */
+/* 有的浏览器最小支持 12px，所以不能直接定义为 10px */
+html { font-size:62.5%; }
+
 @media screen and (min-width: 1080px) {
-  body {
-    font-size: 2.4rem;
+  html {
+    font-size: 18px;
     background-color: rebeccapurple;
   }
 }
 
 @media screen and (min-width: 1001px) and (max-width: 1080px) {
-  body {
-    font-size: 2rem;
+  html {
+    font-size: 16px;
     background-color: red;
   }
 }
 
 @media screen and (min-width: 805px) and (max-width: 1000px) {
-  body {
-    font-size: 1.6rem;
+  html {
+    font-size: 14px;
     background-color: blue;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 804px) {
-  body {
-    font-size: 1.2rem;
+@media screen and (min-width: 375px) and (max-width: 804px) {
+  html {
+    font-size: 12px;
     background-color: yellow;
-  }
-}
-
-@media screen and (max-width: 769px) {
-  body {
-    font-size: 1rem;
-    background-color: burlywood;
   }
 }
 ```
