@@ -108,3 +108,56 @@ html { font-size:62.5%; }
   }
 }
 ```
+
+## CSS 样式组织方式
+
+CSS 样式根据选择器的特指度和样式的顺序产生作用。因此，有必要按照样式产生作用的顺序组织 CSS 代码。
+
+1. 通用样式
+2. 基础样式
+3. 组件及其容器的样式
+4. 结构化样式
+5. 功能性样式
+6. 浏览器特定样式（如果一定需要）
+
+```
+styles
+├── normalizing-styles
+│   └── normalize.css
+│ 
+├── base-styles
+│   ├── forms.css
+│   ├── heading.css
+│   ├── images.css
+│   ├── lists.css
+│   └── tables.css
+│   └── etc.
+│ 
+├── component-styles
+│   ├── alerts.css
+│   ├── buttons.css
+│   ├── carousel.css
+│   ├── dropdowns.css
+│   └── modals.css
+│   └── etc.
+│ 
+├── structural-styles
+│   ├── layout-checkout.css
+│   ├── layout-primary.css
+│   ├── layout-settings.css
+│   └── layout-sidebar.css
+│   └── etc.
+│ 
+│── utility-sytles
+│    └── utility.css
+│ 
+├── browser-specific-styles
+│   └── ie8.css
+│ 
+└── main.css
+```
+
+## 参考书籍
+
+- 《CSS 重构：样式表性能调优》
+- 《响应式 Web 设计：HTML5 和 CSS3实战》
